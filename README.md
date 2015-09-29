@@ -3,23 +3,15 @@ Jenkins ObjectStudio Plugin
 
 Provides Jenkins integration with [Cincom ObjectStudio](http://cincomsmalltalk.com/) Smalltalk. 
 
-Runs ObjectStudio (Version 7 or 8) and reads the Transcript log file and displays it in Jenkins console output. Configuration of the build step includes currently some specific parameters for my own build process, but it should be possible to use it with only the generic configuration parameters.
+Runs ObjectStudio (Version 7 or 8) and reads the Transcript log file and displays it in Jenkins console output. 
 
-The specific configuration parameters are:
-- Preload script: Passed as -l commandline parameter
+Configuration of the build step includes currently some specific parameters for my own build process, but it should be possible to use it with only the generic configuration parameters. I will remove this parameters later and replace them with a more generic approach. These specific configuration parameters are:
 - Load script: Passed as -A commandline parameter
 - Postload script: Passed as AFTERLOGONSCRIPT environment variable
 
-I my remove this parameters later and replace them with a more generic approach.
-
-Some files are copied to a temporary file before running ObjectStudio, because ObjectStudio may change this files:
-- OStudio Ini
-- OStudio Image
-
-Passing Images around multiple Jobs
------------------------------------
-
-
+Some files are copied to a temporary file before running ObjectStudio, because ObjectStudio may change these files:
+- OStudio Ini file
+- OStudio Image file
 
 Cincom and ObjectStudio are registered trademarks of Cincom Systems Inc.
 
