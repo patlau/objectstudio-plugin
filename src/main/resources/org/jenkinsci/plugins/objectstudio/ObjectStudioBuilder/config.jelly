@@ -1,0 +1,40 @@
+<j:jelly xmlns:j="jelly:core" xmlns:st="jelly:stapler" xmlns:d="jelly:define" xmlns:l="/lib/layout" xmlns:t="/lib/hudson" xmlns:f="/lib/form">
+  <!--
+    This jelly script is used for per-project configuration.
+
+    See global.jelly for a general discussion about jelly script.
+  -->
+
+  <!--
+    Creates a text field that shows the value of the "name" property.
+    When submitted, it will be passed to the corresponding constructor parameter.
+  -->
+  <f:entry title="Build Directory" field="buildPath">
+    <f:textbox default="V6"/>
+  </f:entry>
+  <f:entry title="Preload Script" field="preloadScript">
+    <f:textbox default="PreloadOS7.txt"/>
+  </f:entry>
+  <f:entry title="Load Script" field="loadScript">
+    <f:textbox default="Entwicklung\Build\Autoload.txt"/>
+  </f:entry>
+  <f:entry title="Postload Script" field="postloadScript">
+    <f:textbox default="Entwicklung\Build\AfterLogon.txt"/>
+  </f:entry>
+  <f:entry title="OStudio INI" field="ostudioIni">
+    <f:textbox default="Entwicklung\Build\ostudio.ini"/>
+  </f:entry>
+  <f:entry title="OStudio Log" field="ostudioLog">
+    <f:textbox default="OS7.log"/>
+  </f:entry>
+  <f:entry title="OStudio Image" field="ostudioImage">
+    <f:textbox default="ostudio.img"/>
+  </f:entry>
+  <f:entry title="Image Copy" field="imageCopy">
+    <f:checkbox default="true"/>
+  </f:entry>
+  <f:entry title="OStudio Parameter" field="ostudioParameter">
+    <f:textbox default="-E50 -x2 -cSRV:DB:%VE2000_DB_TEST%"/>
+  </f:entry>
+ 
+</j:jelly>
